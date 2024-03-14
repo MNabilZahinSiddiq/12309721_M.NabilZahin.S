@@ -1,0 +1,134 @@
+:root {
+    --clr-blue: blue;
+    --clr-sky-blue: rgb(37, 102, 187);
+    --clr-black: #010101;
+    --clr-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background-image: url(../assets/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    border: 3.7px solid var(--clr-black);
+    box-shadow: 7px 7px 5px var(--clr-black);
+
+    height: 350px;
+    width: 700px;
+    margin: 8rem;
+
+    background-color: rgba(46, 46, 63, 0.481);
+}
+
+.container .container-main {
+    border-right: 3.7px solid var(--clr-black);
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;   
+}
+
+.container .container-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.container .container-aside form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .container-aside form .form-group input {
+    background: none;
+    border: 2px solid var(--clr-black);
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.container .container-aside form .form-group input::placeholder {
+    color: var(--clr-black);
+    font-weight: bold;
+}
+
+.container .container-aside form .btn {
+    cursor: pointer;
+    background-color: rgba(21, 32, 44, 0.867);
+    padding: 0.7rem 1.5rem;
+    margin-top: 1rem;
+    color: var(--clr-white);
+    border: 2px solid rgba(225, 225, 225, 0.867);
+    border-radius: 10px;
+}
+
+.container .container-aside form .btn:hover {
+    background-color: rgba(225, 225, 225, 0.583);
+    color: var(--clr-black);
+    border: 2px solid rgb(21, 32, 44);
+}
+
+/* Media Quarry / Responsive */
+@media (max-width: 930px) {
+    body {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 875px) {
+    body {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 798px) {
+    body {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 719px) {
+    body {
+        height: 900px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .container .container-main {
+        border-bottom: 3.7px solid var(--clr-black);
+        border-right: none;
+    }
+}
